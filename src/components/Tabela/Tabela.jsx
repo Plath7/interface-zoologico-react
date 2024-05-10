@@ -1,5 +1,6 @@
 import Table from 'react-bootstrap/Table';
 import { useState, useEffect } from 'react';
+import AnimalRequests from '../../fetch/AnimalRequests';
 
 function Tabela() {
 
@@ -7,18 +8,7 @@ function Tabela() {
 
     // Recupera a lista de todos os animais do servidor
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/listar-aves');
-                if (!response.ok) {
-                    throw new Error('Erro ao buscar servidor');
-                }
-                const listaAnimais = await response.json();
-                setAnimais(listaAnimais);
-            } catch (error) {
-                console.error('Erro: ', error);
-            }
-        }
+        setAnimais(AnimalRequests.listarAnimais());
 
         fetchData();
     }, []);
