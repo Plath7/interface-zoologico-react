@@ -1,19 +1,16 @@
-.ctn-cardanimal {
-    width: 25%;
-    height: 50vh;
-
-    background-color: #A7A000;
-
-    border: 2px solid #555;
-
-    font-family: "Caesar Dressing", system-ui;
+.ctn-animais {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* .ctn-atracao > img {
-    width: 50%;
-    height: 50%;
-} */
-
-.ctn-cardanimal > p {
-    font-size: 2rem;
+.card-animal {
+    background-color: #A7A000;
+    border: 3px solid #000000;
+    font-family: "Caesar Dressing", system-ui;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width: 25%;
+    margin-top: 30px;
 }

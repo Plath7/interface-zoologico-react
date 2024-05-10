@@ -12,4 +12,4 @@ function Fotos() {
     );
 }
 
-export default Fotos
+export default Fotos;
